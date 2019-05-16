@@ -24,16 +24,11 @@ int main(void) {
     superList = makeMatrix();
     dudList = makeMatrix();
 
-    FILE *fin = fopen("words.txt", "r");
+    FILE *fin = fopen("allwords.txt", "r");
 
     int i;
     for (i = 0; i < NUM_WORDS; i++) {
         fscanf(fin, "%s", superList[i]);
-    }
-    fclose(fin);
-
-    fin = fopen("allwords.txt", "r");
-    for (i = 0; i < NUM_WORDS; i++) {
         fscanf(fin, "%s", dudList[i]);
     }
     fclose(fin);
